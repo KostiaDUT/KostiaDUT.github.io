@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" />
+		<title>Веб сайт Білецького Костянтина</title>
+		<style>
+			body {
+				margin: 0;
+				line-height: normal;
+			}
+			a {
+				text-decoration: none;
+			}
+
+			.home-child,
+			.home-item {
+				position: absolute;
+				top: 123px;
+				left: 62%;
+				border-radius: 50%;
+				background-color: #E1FFDD;
+				width: 243px;
+				height: 243px;
+			}
+			.home-item {
+				top: 377px;
+				left: 29.5%;
+				border-radius: 2px;
+				background: #35762C;
+				border: 1px solid #38772F;
+				box-shadow: 0px 2px 0 #459B39, 2px 4px 6px #51B443;
+				font-weight: 900;
+				letter-spacing: 1px;
+				transition: all 150ms linear;
+				width: 15%;
+				height: 2.5%;
+			}
+			.home-item.hovered {
+				background: #56AC49;
+				border: 1px solid rgba(0, 0, 0, 0.05);
+				box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+				color: #56AC49;
+				text-decoration: none;
+				text-shadow: -1px -1px 0 #1cb7c2;
+				transition: all 250ms linear;
+			}
+			.intro {
+				margin: 0;
+			}
+			.placeholder-text,
+			.intro-container {
+				position: absolute;
+				left: 29.5%;
+				display: inline-block;
+			}
+			.intro-container {
+				top: 128px;
+				font-size: 44px;
+				line-height: 60px;
+				width: 30%;
+				height: 105px;
+			}
+			.placeholder-text {
+				top: 273px;
+				width: 30.5%;
+				height: 66px;
+			}
+			.download-resume {
+				pointer-events : auto;
+				position: absolute;
+				font-size: 20px;
+				font-weight: 500;
+				display: inline-block;
+				top: 386px;
+				left: 30%;
+				color: #fff;
+				width: 167px;
+				height: 21px;
+			}	
+			.home-inner {
+				position: absolute;
+				top: 110px;
+				left: 62%;	
+				border-radius: 50%;
+				width: 243px;
+				height: 243px;
+				object-fit: cover;
+			}
+			.rectangle-div {
+				position: absolute;
+				top: 495px;
+				left: 22%;
+				background-color: #E1FFDD;
+				width: 61%;
+				height: 396px;
+			}
+			.home-child1,
+			.home-child2 {
+				position: absolute;
+				top: 564px;
+				border-radius: 4px;
+				background-color: #fff;
+				width: 22%;
+				height: 295px;
+			}
+			.home-child1 {
+				left: 29.5%;
+				box-shadow: 0 4px 10px rgba(187, 225, 250, 0.25);
+			}
+			.home-child2 {
+				left: 53%;
+			}
+			.lab4,
+			.whc1,
+			.whc2,
+			.lab5 {
+				position: absolute;
+				top: 588px;
+				left: 30%;
+				font-size: 26px;
+				display: inline-block;
+				width: 20%;
+				height: 85px;
+			}
+			.lab4,
+			.whc1,
+			.whc2 {
+				left: 53.5%;
+			}
+			.whc1,
+			.whc2 {
+				top: 680px;
+				left: 38.5%;
+				font-size: 18px;
+				width: 239px;
+				height: 34px;
+			}
+			.whc2 {
+				left: 62%;
+			}
+			.home-child3,
+			.vector-icon {
+				position: absolute;
+				top: 680px;
+				left: 37.5%;
+				width: 1px;
+				height: 21px;
+			}
+			.home-child3 {
+				top: 691px;
+				left: 61%;
+			}
+			.feb-2020,
+			.feb-20201 {
+				position: absolute;
+				top: 680px;
+				left: 30%;
+				font-size: 18px;
+				display: inline-block;
+				width: 374px;
+				height: 34px;
+			}
+			.feb-20201 {
+				left: 53.5%;
+			}
+			.placeholder-text1,
+			.placeholder-text2 {
+				position: absolute;
+				top: 710px;
+				left: 30%;
+				display: inline-block;
+				width: 20%;
+				height: 117px;
+			}
+			.placeholder-text2 {
+				left: 53.5%;
+			}
+			.recent-posts {
+				position: absolute;
+				top: 502px;
+				left: 29.5%;
+				font-size: 22px;
+				line-height: 60px;
+			}
+			.view-all {
+				position: absolute;
+				top: 522px;
+				left: 71.5%;
+				color: #416A3B;
+				text-align: right;
+				display: inline-block;
+				width: 120x;
+				height: 20px;
+			}
+			.view-all:hover{
+				text-decoration: underline;
+			}
+			.featured-works {
+				position: absolute;
+				top: 906px;
+				left: 29.5%;
+				font-size: 22px;
+				line-height: 60px;
+			}
+			.footer-child {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-color: #fff;
+			}
+			.fb-icon,
+			.group-icon,			
+			.insta-icon,
+			.linkedin-icon {
+				position: absolute;
+				top: calc(0% - 40px);
+				left: calc(51.5% - 117px);
+				width: 30px;
+				height: 30px;
+			}
+			.group-icon,
+			.insta-icon,
+			.linkedin-icon {
+				left: calc(51.5% + 85px);
+			}
+			.group-icon,
+			.insta-icon {
+				left: calc(51.5% + 13px);
+				width: 36.92px;
+			}
+			.insta-icon {
+				left: calc(51.5% - 52px);
+				width: 30px;
+			}
+			.copyright-2020-all {
+				position: absolute;
+				top: calc(0% + 16px);
+				left: 36%;
+				width:30%;
+			}
+			.footer {
+				position: absolute;
+				top: 1759px;
+				left: 25%;
+				width: 50%;
+				height: 182px;
+				text-align: center;
+				font-size: 14px;
+			}
+			.exmpl3,
+			.exmpl1,
+			.exmpl2 {
+				position: absolute;
+				top: 977px;
+				left: 43.5%;
+				font-size: 30px;
+			}	
+			.exmpl3,
+			.exmpl2 {
+				top: 1212px;
+			}
+			.exmpl3 {
+				top: 1460px;
+			}
+			.undex1,
+			.undex2,
+			.undex3 {
+				position: absolute;
+				top: 1037px;
+				left: 50%;
+				font-size: 20px;
+				color: #8695a4;
+				display: inline-block;
+				width: 374px;
+				height: 34px;
+			}
+			.undex2,
+			.undex3 {
+				top: 1268px;
+			}
+			.undex3 {
+				top: 1513px;
+			}
+			.placeholder-text3,
+			.placeholder-text4,
+			.placeholder-text5 {
+				position: absolute;
+				top: 1088px;
+				left: 43.5%;
+				display: inline-block;
+				width: 38%;
+				height: 93px;
+			}
+			.placeholder-text4,
+			.placeholder-text5 {
+				top: 1319px;
+			}
+			.placeholder-text5 {
+				top: 1579px;
+				left: 43%;
+				width: 507px;
+			}
+			.home-child4,
+			.home-child5,
+			.home-child6 {
+				position: absolute;
+				top: 1041px;
+				left: 43.5%;
+				border-radius: 16px;
+				background-color: #51864A;
+				width: 62px;
+				height: 25px;
+			}
+			.home-child5,
+			.home-child6 {
+				top: 1272px;
+			}
+			.home-child6 {
+				top: 1517px;
+			}
+			.div,
+			.div1,
+			.div2 {
+				position: absolute;
+				top: 1023px;
+				left: 44.1%;
+				font-size: 18px;
+				line-height: 60px;
+				font-weight: 900;
+				color: #fff;
+			}
+			.div1,
+			.div2 {
+				top: 1254px;
+			}
+			.div2 {
+				top: 1499px;
+			}
+			.home-child7,
+			.home-child8,
+			.home-child9 {
+				position: absolute;
+				top: 1182.5px;
+				left: 46px;
+				width: 858px;
+				height: 1px;
+			}	
+			.home-child8,
+			.home-child9 {
+				top: 1428.5px;
+			}
+			.home-child9 {
+				top: 1675.5px;
+			}
+			.home-child10,
+			.home-child11,
+			.rectangle-icon {
+				position: absolute;
+				top: 988px;
+				left: 29.5%;
+				border-radius: 6px;
+				width: 13%;
+				height: 180px;
+				object-fit: cover;
+			}
+			.home-child10,
+			.home-child11 {
+				top: 1214px;
+			}
+			.home-child11 {
+				top: 1460px;
+				height: 184px;
+			}
+			.exmpl1:visited,
+			.exmpl2:visited,
+			.exmpl3:visited,
+			.lab4:visited,
+			.lab5:visited{
+				color:#000;
+			}
+			.exmpl1:hover,
+			.exmpl2:hover,
+			.exmpl3:hover,
+			.lab4:hover,
+			.lab5:hover{
+				color:#65D465;
+			}
+			.home {
+				position: relative;
+				background-color: #fff;
+				width: 100%;
+				height: 1841px;
+				overflow: hidden;
+				text-align: left;
+				font-size: 16px;
+				color: #092505;
+				font-family: Heebo;
+			}
+		</style> 
+    </head>
+    <body onload="loaded()">
+        <nav class="navigation">
+            <h1>
+               Головна
+            </h1>
+            <ul>
+                <li><a href="main.html">Головна</a></li>
+				<li><a href="pract.html">Практичні</a></li>
+                <li><a href="lab.html">Лабораторні</a></li>
+            </ul>
+        </nav>
+		<div class="home" id="homeContainer">
+        <div class="home-child"></div>
+        <div class="home-item"></div>
+        <b class="intro-container">
+          <p class="intro">I am Kostia,</p>
+          <p class="intro">UI/UX Designer</p>
+        </b>
+        <div class="placeholder-text">
+          Alive levin muller nun desprunt ullapso eat sit olquam dolar da alive sint.
+		  Vertu offtcia compliquat duis anim vertu muller.
+		  Exercitation vinaquat sunt norstrud alive.
+        </div>
+        <a class="download-resume" href="" download="CV.pdf">Download Resume</a>
+        <img class="home-inner" alt="" src="photoes/profileExp2.png" />
+  
+        <div class="rectangle-div"></div>
+        <div class="home-child1"></div>
+        <div class="home-child2"></div>
+        <a class="lab5" href ="">Лабораторна робота №5</a>
+        <a class="lab4" href ="">Лабораторна робота №4</a>
+        <div class="whc1">Web, HTML, CSS</div>
+        <div class="whc2">Web, HTML, CSS</div>
+        
+  
+        
+  
+        <div class="feb-2020">15 Nov 2023</div>
+        <div class="feb-20201">01 Nov 2023</div>
+        <div class="placeholder-text1">Допрацювати головну сторінку сайту відповідно до шаблону. Якщо не хочете змінювати головну сторінку, можете створити нову та розмістити її в перелік своїх лабораторних робіт.</div>
+        <div class="placeholder-text2">Використовуючи шаблон розробити сторінку планера.</div>
+        <div class="recent-posts">Recent works</div>
+        <a class="view-all" href="">View all</a>
+        <div class="featured-works">Also can be interesting for you</div>
+        <div class="footer">
+          <div class="footer-child"></div>
+          <a class="fb-icon" href="" ><img src="photoes/fb.svg"/></a>
+  
+          <a class="linkedin-icon" href=""><img alt="" src="photoes/linkedin.svg"/></a>
+  
+          <a class="group-icon" href=""><img alt="" src="photoes/group.svg"/></a>
+  
+          <a class="insta-icon" href=""><img alt="" src="photoes/insta.svg"></a>
+  
+          <div class="copyright-2020-all">Copyright ©2023  All rights reserved</div>
+        </div>
+        <a class="exmpl1" href="">Example 1</a>
+        <a class="exmpl2" href="">Example 2</a>
+        <a class="exmpl3" href="">Example 3</a>
+        <div class="undex1">QA Engineer</div>
+        <div class="undex2">Front-end Developer</div>
+        <div class="undex3">UI/UX Designier</div>
+        <div class="placeholder-text3">
+          Alive levin muller nun desprunt ullapso eat sit olquam dolar da alive sint.
+		  Vertu offtcia compliquat duis anim vertu muller.
+		  Exercitation vinaquat sunt norstrud alive.
+        </div>
+        <div class="placeholder-text4">
+          Alive levin muller nun desprunt ullapso eat sit olquam dolar da alive sint.
+		  Vertu offtcia compliquat duis anim vertu muller.
+		  Exercitation vinaquat sunt norstrud alive.
+        </div>
+        <div class="placeholder-text5">
+          Alive levin muller nun desprunt ullapso eat sit olquam dolar da alive sint.
+		  Vertu offtcia compliquat duis anim vertu muller.
+		  Exercitation vinaquat sunt norstrud alive.
+        </div>
+        <div class="home-child4"></div>
+        <div class="home-child5"></div>
+        <div class="home-child6"></div>
+        <div class="div">2023</div>
+        <div class="div1">2023</div>
+        <div class="div2">2023</div>
+        <img class="home-child7" alt="" src="photoes/placeholder.png"  />
+  
+        <img class="home-child8" alt="" src="photoes/placeholder.png" />
+  
+        <img class="home-child9" alt="" src="photoes/placeholder.png" />
+  
+        <img class="rectangle-icon" alt="" src="photoes/placeholder.png" />
+  
+        <img class="home-child10" alt="" src="photoes/placeholder.png" />
+  
+        <img class="home-child11" alt="" src="photoes/placeholder.png" />
+      </div>
+	  <script>
+          document.querySelector('.home-item').addEventListener('mouseover', function () {
+          this.classList.add('hovered');
+          });
+
+          document.querySelector('.home-item').addEventListener('mouseout', function () {
+          this.classList.remove('hovered');
+          });
+          document.querySelector('.download-resume').addEventListener('mouseover', function () {
+          document.querySelector(".home-item").classList.add('hovered');
+          });
+
+          document.querySelector('.download-resume').addEventListener('mouseout', function () {
+          document.querySelector(".home-item").classList.remove('hovered');
+          });
+      </script>
+</body>
+</html>
